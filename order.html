@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fullcodes2.css" />
+    <link rel="stylesheet" href="order.css" />
+    <link rel="stylesheet" href="alertbox.css" />
+    <title>Order</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/removedlogo.png" />
+      <h3>Rhea's Kakanin</h3>
+      <div class="navbar">
+        <nav>
+          <a href="fullcodes2.html">Home</a>
+          <a href="fullcodes2.html">Products</a>
+          <a href="#menu">Order now!</a>
+          <a href="fullcodes2.html">About</a>
+          <button onclick="location.href = 'fullcodes.html'">LOG-OUT</button>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <section class="menu" id="menu">
+        <section class="item" data-name=">Bibingka Biko Flavor" data-price="10">
+          <img src="images/img1.jpg">
+          <h3>Bibingka Biko Flavor</h3>
+          <p>₱10 per slice</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Pichi-Pichi" data-price="10">
+          <img src="images/img2.jpg" >
+          <h3>Pichi-Pichi</h3>
+          <p>₱10 per slice</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Cassava Cake" data-price="10">
+          <img src="images/img3.jpg" ">
+          <h3>Cassava Cake</h3>
+          <p>₱10 per slice</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Sapin-sapin" data-price="10">
+          <img src="images/img4.jpg">
+          <h3>Sapin-sapin</h3>
+          <p>₱10 per slice</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Kutsinta" data-price="10">
+          <img src="images/img5.jpg">
+          <h3>Kutsinta</h3>
+          <p>₱10 per slice</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Bibingka Ube" data-price="10">
+          <img src="images/img6.jpg">
+          <h3>Bibingka Ube</h3>
+          <p>₱10 per slice</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Bibingka latik" data-price="10">
+          <img src="images/img7.jpg">
+          <h3>Bibingka latik</h3>
+          <p>₱10 per slice</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section
+          class="item"
+          data-name=">Ube Halaya with cheese"
+          data-price="75"
+        >
+          <img src="images/img8.jpg" >
+          <h3>Ube Halaya with cheese</h3>
+          <p>₱75 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Buchi with monggo" data-price="30">
+          <img src="images/img9.jpg">
+          <h3>Buchi with monggo</h3>
+          <p>₱30 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Ube halaya" data-price="60">
+          <img src="images/img10.jpg">
+          <h3>Ube halaya</h3>
+          <p>₱60 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Sapin-sapin on a container" data-price="60">
+          <img src="images/img11.jpg">
+          <h3>Sapin-sapin on a container</h3>
+          <p>₱60 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">latik" data-price="60">
+          <img src="images/img12.jpg" >
+          <h3>latik</h3>
+          <p>₱60 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">kutsinta" data-price="65">
+          <img src="images/img13.jpg" >
+          <h3>kutsinta</h3>
+          <p>₱65 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">black-kutsinta" data-price="65">
+          <img src="images/img14.jpg" >
+          <h3>black-kutsinta</h3>
+          <p>₱65 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Puto cheese" data-price="60">
+          <img src="images/img15.jpg">
+          <h3>Puto cheese</h3>
+          <p>₱60 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Leche flan" data-price="75">
+          <img src="images/img26.jpg">
+          <h3>Leche flan</h3>
+          <p>₱75 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Yema Cake" data-price="70">
+          <img src="images/img17.jpg" >
+          <h3>Yema Cake</h3>
+          <p>₱70 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Suman Kamote" data-price="15">
+          <img src="images/img18.jpg">
+          <h3>Suman Kamote</h3>
+          <p>₱15 per each</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Suman Latik" data-price="15">
+          <img src="images/img20.jpg" >
+          <h3>Suman Latik</h3>
+          <p>₱15 per each</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Suman sa Ibos" data-price="15">
+          <img src="images/img21.jpg" >
+          <h3>Suman sa Ibos</h3>
+          <p>₱15 per each</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Kutsinta with chess" data-price="50">
+          <img src="images/img22.jpg" >
+          <h3>Kutsinta with chess</h3>
+          <p>₱50 per tub</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Pichi-Pichi" data-price="20">
+          <img src="images/img24.jpg">
+          <h3>Pichi-Pichi</h3>
+          <p>₱20 per each</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+
+        <section class="item" data-name=">Puto Pao" data-price="25">
+          <img src="images/img25.jpg">
+          <h3>Puto Pao</h3>
+          <p>₱25 per each</p>
+          <div class="controls">
+            <button onclick="addItem(this)">+</button>
+            <button onclick="removeItem(this)">-</button>
+          </div>
+        </section>
+      </section>
+   <section class="order-list">
+  <h2>Your Order List</h2>
+  <div id="orders"></div>
+  <div class="total">Total: ₱<span id="total">0</span></div>
+  <div class="actions">
+    <button class="cancel" onclick="clearOrders()">Cancel</button>
+    <!-- Instead of calling placeOrder directly, redirect -->
+    <button class="order" onclick="placeOrder()">Proceed</button>
+  </div>
+</section>
+
+    <!-- External JS -->
+    <script src="ordercalculations.js"></script>
+  </body>
+</html>

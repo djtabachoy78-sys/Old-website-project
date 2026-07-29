@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project Website</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="home.css">
+   <link rel="stylesheet" href="product.css">
+   <link rel="stylesheet" href="loading.css">
+   <link rel="stylesheet" href="warning.css">
+   <link rel="stylesheet" href="about.css">
+   <link rel="stylesheet" href="devprof.css">
+  </head>
+  <body>  
+    <section>
+       <div id="login-warning" class="modal-overlay">
+  <div class="modal-content">
+    <h3>Wait! Just a reminder...</h3>
+    <p>You need to log in to your account first before placing an order.</p>
+    <div class="modal-buttons">
+      <a href="login.html" class="btn-login">Go to Login</a>
+      <a href="#" class="btn-close">Cancel</a>
+    </div>
+  </div>
+</div>
+    </section>
+     <section>
+  <div class="loader-wrapper" id="loader">
+    <div class="loader"></div>
+    <p>Preparing your Kakanin...</p>
+    <p class="second-title">Don't forget to login for before you order!!!</p>
+  </div>
+</section>
+<script>
+  // Check if loader has already been shown in this session
+  if (sessionStorage.getItem("loaderShown")) {
+    document.getElementById("loader").style.display = "none";
+  } else {
+    // Show loader, then hide after animation
+    setTimeout(() => {
+      document.getElementById("loader").style.display = "none";
+      sessionStorage.setItem("loaderShown", "true");
+    }, 2500); // match your fadeOut delay
+  }
+</script>
+    <header>
+      <img src  ="images/removedlogo.png">
+      <h3>Rhea's Kakanin</h3>
+      <div class="navbar">
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#login-warning">Order now!</a>
+          <a href="#about">About</a>
+          <button onclick="location.href = 'login.html'">LOG-IN</button>
+        </nav>
+      </div>
+    </header>
+    <br /><br />
+    <br /><br />
+    <section class="home" id="home">
+      <h1 class="main-title">Welcome to Rhea's Kakanin</h1>
+      <div class="carousel-container">
+        <div class="carousel-group">
+          <div class="slide"><img src="images/img1.jpg"></div>
+          <div class="slide"><img src="images/img2.jpg"></div>
+          <div class="slide"><img src="images/img3.jpg"></div>
+          <div class="slide"><img src="images/img4.jpg"></div>
+          <div class="slide"><img src="images/img5.jpg"></div>
+          <div class="slide"><img src="images/img6.jpg"></div>
+          <div class="slide"><img src="images/img7.jpg"></div>
+        </div>
+
+        <div class="carousel-group" aria-hidden="true">
+          <div class="slide"><img src="images/img1.jpg"></div>
+          <div class="slide"><img src="images/img2.jpg"></div>
+          <div class="slide"><img src="images/img3.jpg"></div>
+          <div class="slide"><img src="images/img4.jpg"></div>
+          <div class="slide"><img src="images/img5.jpg"></div>
+          <div class="slide"><img src="images/img6.jpg"></div>
+          <div class="slide"><img src="images/img7.jpg"></div>
+        </div>
+      </div>
+      <h1 class="sub-title">Ready to taste the tradition?</h1>
+      <button class="order-btn" onclick="location.href='#login-warning'">ORDER NOW !!!</button>
+    </section>
+<section class="products-section" id="products">
+    <h1 class="section-title">HERE'S OUR PRODUCTS</h1>
+  <div class="product-card" >
+    <div class="product-image">
+      <img src="images/img1.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Bibingka Biko Flavor</h3>
+      <p class="product-price">₱10 per slices</p>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="product-image">
+      <img src="images/img2.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Pichi-Pichi</h3>
+      <p class="product-price">₱10 per slices</p>
+    </div>
+  </div>
+ <div class="product-card">
+    <div class="product-image">
+      <img src="images/img3.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Cassava Cake</h3>
+      <p class="product-price">₱10 per slices</p>
+    </div>
+  </div>
+  <div class="product-card">
+    <div class="product-image">
+      <img src="images/img4.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Sapin-sapin</h3>
+      <p class="product-price">₱10 per slices</p>
+    </div>
+  </div>
+    <div class="product-card">
+    <div class="product-image">
+      <img src="images/img5.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Kutsinta</h3>
+      <p class="product-price">₱10 per slices</p>
+    </div>
+  </div>
+  </div>
+    <div class="product-card">
+    <div class="product-image">
+      <img src="images/img6.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Bibingka Ube Flavor</h3>
+      <p class="product-price">₱10 per slices</p>
+    </div>
+  </div>
+    <div class="product-card">
+    <div class="product-image">
+      <img src="images/img7.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Bibingka latik Flavor</h3>
+      <p class="product-price">₱20 per slices</p>
+    </div>
+  </div>
+    <div class="product-card">
+    <div class="product-image">
+      <img src="images/img8.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Ube Halaya with cheese</h3>
+      <p class="product-price">₱75 per tub</p>
+    </div>
+  </div>
+      <h1 class="section-title">YOU SHOULD <span class="order-trigger" onclick="location.href='#login-warning'">ORDER NOW!!!</span></h1>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img9.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Buchi with monggo </h3>
+      <p class="product-price">₱30 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img10.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Ube halaya flavor</h3>
+      <p class="product-price">₱60 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img11.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Sapin-sapin Flavor</h3>
+      <p class="product-price">₱60 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img12.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">latik Flavor</h3>
+      <p class="product-price">₱60 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img13.jpg" >
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">kutsinta</h3>
+      <p class="product-price">₱65 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img14.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Black Kutsinta</h3>
+      <p class="product-price">₱65 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img15.jpg">
+    </div>
+    <div class="product-info">  
+      <h3 class="product-name">Puto cheese</h3>
+      <p class="product-price">₱60 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img26.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Leche flan</h3>
+      <p class="product-price">₱70 per tub</p>
+    </div>
+  </div>
+   <h1 class="section-title">Taste the tradition! That’s why you should <span class="order-trigger" onclick="location.href='#login-warning'">ORDER NOW!!!</span></h1>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img17.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Yema Cake</h3>
+      <p class="product-price">₱70 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img18.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Suman Kamote</h3>
+      <p class="product-price">₱15 per each</p>
+    </div>
+  </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img20.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Suman Latik</h3>
+      <p class="product-price">₱25 peso per each</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img21.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Suman sa Ibos</h3>
+      <p class="product-price">₱15 per each</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img22.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Kutsinta with chess</h3>
+      <p class="product-price">₱50 per tub</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img24.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Pichi-Pichi</h3>
+      <p class="product-price">₱20 per each</p>
+    </div>
+  </div>
+   <div class="product-card">
+    <div class="product-image">
+      <img src="images/img25.jpg">
+    </div>
+    <div class="product-info">
+      <h3 class="product-name">Puto Pao</h3>
+      <p class="product-price">₱25 per each</p>
+    </div>
+  </div>
+</section>
+<section class="about-section" id="about">
+  <div class="about-container">
+    
+    <div class="about-image">
+      <img src="images/img27.jpg" alt="Rhea's Kakanin Storefront">
+    </div>
+
+    <div class="about-details">
+      <h2>Visit Rhea's Kakanin</h2>
+      <p class="subtitle">Freshly cooked kakanin waiting for you!</p>
+      <div class="address-box">
+        <h3>Our Location</h3>
+        <p>Buenviaje street</p>
+        <p>San Andres</p> 
+        <p>Cainta Rizal</p>
+        <p>1900</p>
+        <p>phone number: 09928089203</p>
+      </div>
+    </div>
+
+    <div class="about-map">
+       <iframe src="https://www.google.com/maps/embed?pb=!4v1772529047109!6m8!1m7!1s0hCCnKFs_AHPMJoETFvLXg!2m2!1d14.57777220375691!2d121.1171027980087!3f145.02522930810954!4f-19.97813245638143!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+
+  <div class="team-footer">
+    <a href="devprof.html" class="btn-minimal-about">Developers Profile</a>
+  </div>
+</section>
+
+  </body>
+</html>

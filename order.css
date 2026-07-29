@@ -1,0 +1,111 @@
+.container {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+section.menu {
+display: flex;      
+  flex-wrap: wrap;    
+  justify-content: center; 
+  gap: 20px;
+}
+
+section.item {
+  flex: 0 0 200px;
+  background: #a0522d;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition:transform 0.2s ease,box-shadow 0.2s ease; 
+}
+
+section.item:hover {
+  transition: 0.3s ease;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+section.item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+section.item h3 {
+  margin: 10px 0 5px;
+  font-size: 23px;
+}
+
+section.item p {
+  margin: 0;
+  font-weight: bold;
+  color: black;
+}
+
+.controls {
+  margin-top: 10px;
+}
+
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+  color: black;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+button:hover {
+  background: #8c6f6f;
+  transform: scale(1.05);
+}
+
+section.order-list {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.total {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.actions .cancel {
+  background: #ccc;
+  color: #333;
+}
+.actions .order {
+  background: black;
+  color: white;
+}
+.order-item img.order-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}

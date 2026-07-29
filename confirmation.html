@@ -1,0 +1,92 @@
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="confirmation.css"> 
+</head>
+<body>
+  <div class="confirmation">
+  <h1>Thank You for Your Order!</h1>
+  <p>We've received your order and will prepare it with care.</p>
+
+  <h2>Order Summary</h2>
+  <div id="orders"></div>
+  <div class="total">Total: ₱<span id="total"></span></div>
+
+  <!-- Phone Number -->
+  <div class="contact">
+    <label for="phone-number">Phone Number:</label>
+    <input type="tel" id="phone-number" placeholder="Enter your phone number" required>
+  </div>
+
+  <!-- Payment Method -->
+  <div class="payment">
+    <label for="payment-method">Payment Method:</label>
+    <select id="payment-method" onchange="showShopNumber()">
+      <option value="gcash">GCash</option>
+      <option value="cash">Cash (on pickup)</option>
+    </select>
+    <p id="shop-number" style="margin-top:0.5rem; font-weight:bold; color:#333;"></p>
+  </div>
+
+  <div class="actions">
+    <button class="continue"onclick="location.href='order.html'">Continue Ordering</button>
+    <button class="confirm" onclick="finalizeOrder()">Confirm</button>
+  </div>
+</div>
+
+<script>
+ // Load order data from localStorage
+const orders = JSON.parse(localStorage.getItem("orders")) || {};
+const total = localStorage.getItem("total") || 0;
+
+// Render orders
+const box = document.getElementById("orders");
+box.innerHTML = Object.entries(orders).map(([name, o]) => `
+  <div class="order-item">
+    <span>${name} × ${o.qty}</span>
+    <span>₱${o.qty * o.price}</span>
+  </div>
+`).join("");
+document.getElementById("total").textContent = total;
+
+// Show shop number if GCash is selected
+function showShopNumber() {
+  const method = document.getElementById("payment-method").value;
+  const shopNumberEl = document.getElementById("shop-number");
+
+  if (method === "gcash") {
+    shopNumberEl.textContent = "Send payment to GCash: 09928089203";
+  } else {
+    shopNumberEl.textContent = "";
+  }
+}
+
+// Finalize order
+function finalizeOrder() {
+  const phone = document.getElementById("phone-number").value.trim();
+  const method = document.getElementById("payment-method").value;
+
+  if (!phone) {
+    alert("Please enter your phone number before confirming.");
+    return;
+  }
+
+  let methodText = method === "gcash" ? "GCash (09928089203)" :
+                   "Cash (on pickup)";
+
+  alert(`✅ Order confirmed!
+Phone: ${phone}
+Total: ₱${total}
+Payment: ${methodText}
+Pickup: Buenviaje street, San Andres, Cainta Rizal, 1900`);
+
+  localStorage.clear();
+  window.location.href = "fullcodes2.html"; // back to menu
+}
+
+</script>
+</body>
+</html>

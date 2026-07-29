@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register.html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .register-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+        h2 { text-align: center; color: #333; margin-bottom: 20px; }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .signup-btn { 
+            background-color: #000; 
+            color: white;
+            border: none;
+        }
+        .signup-btn:hover { background-color: #333; }
+        .back-btn { 
+            background-color: transparent; 
+            color: #666; 
+            border: 1px solid #ddd;
+            font-weight: normal;
+        }
+        .back-btn:hover { 
+            background-color: #f9f9f9;
+            color: #000;
+            border-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-container">
+    <h2>Create Account</h2>
+    <form action="fullcodes2.html">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <input type="number" placeholder="Phone Number" required>
+         <input type="text" placeholder="home address" required>
+        <input 
+            type="email" 
+            placeholder="Gmail Account" 
+            pattern="+@gmail/.com" 
+            title="Please use a valid @gmail.com address"
+            required
+        >
+        
+        <div class="btn-group">
+            <button type="submit" class="signup-btn">Sign Up</button>
+            <button type="button" class="back-btn" onclick="location.href='login.html'">Back to Login</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

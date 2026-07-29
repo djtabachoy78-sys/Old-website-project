@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login.html/ideanijairusniggaman</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+        h2 { text-align: center; color: #333; }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+       .btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-family: sans-serif;
+}
+
+
+.login-btn { 
+    background-color: #000; 
+    color: white;
+    border: none;
+}
+
+.login-btn:hover { 
+    background-color: #333; 
+}
+
+
+.register-btn {
+    background-color: transparent; 
+    color: #666; 
+    border: 1px solid #ddd; 
+}
+.register-btn:hover { 
+    background-color: #f9f9f9;
+    color: #000;
+    border-color: #bbb;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="fullcodes2.html">
+        <input 
+            type="email" 
+            placeholder="Gmail Account (e.g. name@gmail.com)" 
+            pattern=".+@gmail\.com" 
+            title="Please use a valid @gmail.com address"
+            required
+        >
+        <input type="password" placeholder="Password" required>
+        
+      <div class="btn-group">
+    <button type="submit" class="login-btn">Log In</button>
+    <button type="button" class="register-btn" onclick="location.href='signup.html'">Create New Account</button>
+</div>
+    </form>
+</div>
+
+</body>
+</html>
